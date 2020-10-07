@@ -27,7 +27,7 @@ var models = [
     },
 
     {
-        url: './assets/articuno/scene.gltf',
+        url: './assets/a/scene.gltf',
         scale: '1 1 1',
         rotation: '0 -45 0',
         info: 'Articuno',
