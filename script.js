@@ -23,12 +23,12 @@ var models = [
         url: './assets/magnemite/scene.gltf',
         scale: '2 2 2',
         info: 'Magnemite muy pequeño',
-        rotation: '0 200 0',
+        rotation: '0 360 0',
     },
     {
         url: './assets/articuno/scene.gltf',
         scale: '0.2 0.2 0.2',
-        rotation: '0 250 0',
+        rotation: '0 0 0',
         info: 'Articuno, tamaño correcto aun sin rotar',
     },
 
