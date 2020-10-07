@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '<>';
+    button.innerText = '< >';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -24,13 +24,6 @@ var models = [
         scale: '2 2 2',
         info: 'Magnemite',
         rotation: '0 -45 0',
-    },
-
-    {
-        url: './assets/a/Bee.glb',
-        scale: '1 1 1',
-        rotation: '0 -45 0',
-        info: 'Articuno',
     },
 
     {
