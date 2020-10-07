@@ -11,8 +11,8 @@ function staticLoadPlaces() {
         {
             name: 'Pokèmon',
             location: {
-                lat: 19.7256298,
-                lng: -103.4612248,
+                lat: 19.71481,
+                lng: -103.46468,
             },
         },
     ];
@@ -31,12 +31,7 @@ var models = [
         rotation: '0 -45 0',
         info: 'Articuno',
     },
-    {
-        url: './assets/dragonite/scene.gltf',
-        scale: '0.08 0.08 0.08',
-        rotation: '0 -45 0',
-        info: 'Dragonite',
-    },
+    
 ];
 
 var modelIndex = 0;
