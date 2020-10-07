@@ -25,6 +25,14 @@ var models = [
         info: 'Magnemite',
         rotation: '0 -45 0',
     },
+
+    {
+        url: './assets/articuno/scene.gltf',
+        scale: '1 1 1',
+        rotation: '0 -45 0',
+        info: 'Articuno',
+    },
+
     {
         url: './assets/articuno/scene.gltf',
         scale: '0.2 0.2 0.2',
@@ -32,12 +40,7 @@ var models = [
         info: 'Articuno',
     },
 
-    {
-        url: './assets/magnemite/scene.gltf',
-        scale: '7 7 7',
-        rotation: '0 -45 0',
-        info: 'Dragonite',
-   },
+  
 ];
 
 
