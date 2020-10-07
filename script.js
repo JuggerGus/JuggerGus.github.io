@@ -33,7 +33,7 @@ var models = [
     },
 
     {
-        url: './assets/dragonite/scene.gltf',
+        url: './assets/a/scene.gltf',
         scale: '7 7 7',
         rotation: '0 -45 0',
         info: 'Dragonite',
