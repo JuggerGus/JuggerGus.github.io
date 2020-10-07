@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '< >';
+    button.innerText = '﹖';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -12,7 +12,7 @@ function staticLoadPlaces() {
             name: 'Pokèmon',
             location: {
                 lat: 19.7256298,
-                 lng: -103.4612248,
+                lng: -103.4612248,
             },
         },
     ];
@@ -21,21 +21,23 @@ function staticLoadPlaces() {
 var models = [
     {
         url: './assets/magnemite/scene.gltf',
-        scale: '2 2 2',
+        scale: '0.5 0.5 0.5',
         info: 'Magnemite',
         rotation: '0 -45 0',
     },
-
     {
         url: './assets/articuno/scene.gltf',
         scale: '0.2 0.2 0.2',
         rotation: '0 -45 0',
         info: 'Articuno',
     },
-
-  
+    {
+        url: './assets/dragonite/scene.gltf',
+        scale: '0.08 0.08 0.08',
+        rotation: '0 -45 0',
+        info: 'Dragonite',
+    },
 ];
-
 
 var modelIndex = 0;
 var setModel = function (model, entity) {
@@ -56,8 +58,6 @@ var setModel = function (model, entity) {
     const div = document.querySelector('.instructions');
     div.innerText = model.info;
 };
-
-
 
 function renderPlaces(places) {
     let scene = document.querySelector('a-scene');
