@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '1';
+    button.innerText = '2';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -21,14 +21,14 @@ function staticLoadPlaces() {
 var models = [
     {
         url: './assets/magnemite/scene.gltf',
-        scale: '0.5 0.5 0.5',
+        scale: '3 3 3',
         info: 'Magnemite',
-        rotation: '0 180 0',
+        rotation: '0 -45 0',
     },
     {
         url: './assets/articuno/scene.gltf',
-        scale: '0.2 0.2 0.2',
-        rotation: '0 180 0',
+        scale: '1 1 1',
+        rotation: '0 -45 0',
         info: 'Articuno',
     },
   
