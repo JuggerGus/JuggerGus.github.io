@@ -1,6 +1,6 @@
 window.onload = () => {
     const button = document.querySelector('button[data-action="change"]');
-    button.innerText = '7';
+    button.innerText = '3';
 
     let places = staticLoadPlaces();
     renderPlaces(places);
@@ -27,7 +27,7 @@ var models = [
     },
     {
         url: './assets/articuno/scene.gltf',
-        scale: '0.2 0.2 0.2',
+        scale: '1 1 1',
         rotation: '0 -45 0',
         info: 'Articuno',
     },
