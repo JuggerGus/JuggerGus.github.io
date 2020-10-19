@@ -21,13 +21,13 @@ function staticLoadPlaces() {
 var models = [
     {
         url: './assets/magnemite/scene.gltf',
-        scale: '0.5 0.5 0.5',
+        scale: '1 1 1',
         info: 'Magnemite',
         rotation: '0 -45 0',
     },
     {
         url: './assets/articuno/scene.gltf',
-        scale: '0.2 0.2 0.2',
+        scale: '1 1 1',
         rotation: '0 -45 0',
         info: 'Articuno',
     },
