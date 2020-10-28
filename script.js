@@ -31,7 +31,7 @@ window.onload = () => {
 
 
 
-19.71481
+
 function staticLoadPlaces() {
     return [
         {
