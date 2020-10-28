@@ -48,7 +48,7 @@ window.onload = () => {
                     const placeText = document.createElement('a-link');
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeText.setAttribute('title', place.name);
-                    placeText.setAttribute('scale', '3 3 3');
+                    placeText.setAttribute('scale', '7 7 7');
                     
                     placeText.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
