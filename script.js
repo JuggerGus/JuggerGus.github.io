@@ -31,14 +31,14 @@ window.onload = () => {
 
 
 
-
+19.71481
 function staticLoadPlaces() {
     return [
         {
-            name: "Testing",
+            name: "CVS",
             location: {
-                lat: -103.4643616, // change here latitude if using static data
-                lng: 19.7147765, // change here longitude if using static data
+                lat: 19.71481, // change here latitude if using static data
+                lng: -103.46468, // change here longitude if using static data
             }
         },
         
@@ -48,6 +48,14 @@ function staticLoadPlaces() {
 
     ];
 }
+
+
+
+
+
+
+
+
 
 
 
