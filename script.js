@@ -16,7 +16,7 @@ function loadPlaces(position) {
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=30 
+        &limit=15
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {
