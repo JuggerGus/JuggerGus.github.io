@@ -16,7 +16,7 @@ function loadPlaces(position) {
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=10 
+        &limit=30 
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {
@@ -48,7 +48,7 @@ window.onload = () => {
                     const placeText = document.createElement('a-link');
                     placeText.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     placeText.setAttribute('title', place.name);
-                    placeText.setAttribute('scale', '10 10 10');
+                    placeText.setAttribute('scale', '15 15 15');
                     
                     placeText.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
