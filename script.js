@@ -79,8 +79,8 @@ window.onload = () => {
                     //text.setAttribute('scale', '15 15 15');
 
                     // add place icon
-                    const icon = document.createElement('a-image');
-                    icon.setAttribute('src', '../assets/map-marker.png');
+                    //const icon = document.createElement('a-image');
+                    //icon.setAttribute('src', '../assets/map-marker.png');
 
 
                     text.addEventListener('loaded', () => {
