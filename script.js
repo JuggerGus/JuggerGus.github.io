@@ -1,13 +1,14 @@
-const loadPlaces = function (coords) {
+const loadPlaces = function(coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
-    //const method = 'api';
+    const method = 'api';
 
     const PLACES = [
         {
-            name: "Fruteria",
+            name: "Your place name",
             location: {
-                lat: 19.715469, // add here latitude if using static data
-                lng: -103.465902, // add here longitude if using static data
+                lat: 0, // add here latitude if using static data
+                lng: 0, // add here longitude if using static data
+
             }
         },
     ];
@@ -37,7 +38,7 @@ function loadPlaceFromAPIs(position) {
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=5
+        &limit=10
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {
@@ -58,36 +59,49 @@ window.onload = () => {
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
 
-        // than use it to load from remote APIs some places nearby
+        // then use it to load from remote APIs some places nearby
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
 
-                    // add place name
-                    const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
-                    text.setAttribute('scale', '15 15 15');
-
-                    //const text = document.createElement('a-link');
-                    //text.setAttribute('gps-entity-place', `latitude: '19.715469'; longitude: '-103.465902' ;`);
-                    //text.setAttribute('title', place.name);
-                    //text.setAttribute('href', 'https://drive.google.com/drive/u/0/my-drive');
-                    //text.setAttribute('scale', '15 15 15');
-
                     // add place icon
-                    //const icon = document.createElement('a-image');
-                    //icon.setAttribute('src', '../assets/map-marker.png');
+                    const icon = document.createElement('a-image');
+                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    icon.setAttribute('name', place.name);
+                    icon.setAttribute('src', '../assets/map-marker.png');
 
+                    // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
+                    icon.setAttribute('scale', '20, 20');
 
-                    text.addEventListener('loaded', () => {
-                        window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-                    });
+                    icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
 
-                    scene.appendChild(text);
+                    const clickListener = function(ev) {
+                        ev.stopPropagation();
+                        ev.preventDefault();
+
+                        const name = ev.target.getAttribute('name');
+
+                        const el = ev.detail.intersection && ev.detail.intersection.object.el;
+
+                        if (el && el === ev.target) {
+                            const label = document.createElement('span');
+                            const container = document.createElement('div');
+                            container.setAttribute('id', 'place-label');
+                            label.innerText = name;
+                            container.appendChild(label);
+                            document.body.appendChild(container);
+
+                            setTimeout(() => {
+                                container.parentElement.removeChild(container);
+                            }, 1500);
+                        }
+                    };
+
+                    icon.addEventListener('click', clickListener);
+                    
+                    scene.appendChild(icon);
                 });
             })
     },
