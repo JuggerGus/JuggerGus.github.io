@@ -4,7 +4,7 @@ const loadPlaces = function(coords) {
 
     const PLACES = [
         {
-            name: "Your place name",
+            name: "Home",
             location: {
                 lat: 19.71481, // add here latitude if using static data
                 lng: -103.46468, // add here longitude if using static data
@@ -13,9 +13,9 @@ const loadPlaces = function(coords) {
         },
     ];
 
-    if (method === 'api') {
-        return loadPlaceFromAPIs(coords);
-    }
+    //if (method === 'api') {
+        //return loadPlaceFromAPIs(coords);
+    //}
 
     return Promise.resolve(PLACES);
 };
