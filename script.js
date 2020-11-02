@@ -72,16 +72,17 @@ window.onload = () => {
                     text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
                     text.setAttribute('scale', '15 15 15');
 
-                    const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: '19.715469'; longitude: '-103.465902' ;`);
-                    text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'https://drive.google.com/drive/u/0/my-drive');
-                    text.setAttribute('scale', '15 15 15');
+                    //const text = document.createElement('a-link');
+                    //text.setAttribute('gps-entity-place', `latitude: '19.715469'; longitude: '-103.465902' ;`);
+                    //text.setAttribute('title', place.name);
+                    //text.setAttribute('href', 'https://drive.google.com/drive/u/0/my-drive');
+                    //text.setAttribute('scale', '15 15 15');
+
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
-                    icon.setAttribute('src', './map-marker.png');
+                    icon.setAttribute('src', '../assets/map-marker.png');
 
 
                     text.addEventListener('loaded', () => {
