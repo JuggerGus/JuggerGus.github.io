@@ -68,9 +68,16 @@ window.onload = () => {
                     // add place name
                     const text = document.createElement('a-link');
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    text.setAttribute('title','juggerGus' );
+                    text.setAttribute('title', place.name);
                     text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
                     text.setAttribute('scale', '20 20 20');
+
+                    // add place icon
+                    const icon = document.createElement('a-image');
+                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    icon.setAttribute('name', place.name);
+                    icon.setAttribute('src', './map-marker.png');
+
 
                     text.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
