@@ -13,6 +13,8 @@ const loadPlaces = function(coords) {
         },
     ];
 
+
+
     if (method === 'api') {
         return loadPlaceFromAPIs(coords);
     }
@@ -21,19 +23,19 @@ const loadPlaces = function(coords) {
 };
 
 // getting places from REST APIs
-function loadPlaceFromAPIs(position) {
-    const params = {
+function dynamicLoadPlaces(position) {
+    let params = {
         radius: 300,    // search places not farther than this value (in meters)
-        clientId: 'HKAW5VITMAJNCPSOD3ADM3GGWN4SPT2MGPYAZLDWWOZRRNLZ',
-        clientSecret: 'OCR21ENMN54X5JO4BIK3X2OOMNKDJYPJTJ3D0KFDXGBQ2WSI',
+        clientId: 'PONER LOS CODIGOS',
+        clientSecret: 'PONER LOS CODIGOS',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
     };
 
     // CORS Proxy to avoid CORS problems
-    const corsProxy = 'https://cors-anywhere.herokuapp.com/';
+    let corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
     // Foursquare API
-    const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
+    let endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
         &ll=${position.latitude},${position.longitude}
         &radius=${params.radius}
         &client_id=${params.clientId}
@@ -51,6 +53,7 @@ function loadPlaceFromAPIs(position) {
             console.error('Error with places API', err);
         })
 };
+
 
 
 window.onload = () => {
