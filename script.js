@@ -70,8 +70,13 @@ window.onload = () => {
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
-                    text.setAttribute('scale', '20 20 20');
+                    text.setAttribute('scale', '15 15 15');
 
+                    const text = document.createElement('a-link');
+                    text.setAttribute('gps-entity-place', `latitude: '19.715469'; longitude: '-103.465902' ;`);
+                    text.setAttribute('title', place.name);
+                    text.setAttribute('href', 'https://drive.google.com/drive/u/0/my-drive');
+                    text.setAttribute('scale', '15 15 15');
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
