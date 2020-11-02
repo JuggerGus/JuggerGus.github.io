@@ -37,7 +37,7 @@ function loadPlaceFromAPIs(position) {
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=15
+        &limit=5
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {
@@ -69,7 +69,7 @@ window.onload = () => {
                     const text = document.createElement('a-link');
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'http://www.example.com/');
+                    text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
                     text.setAttribute('scale', '20 20 20');
 
                     text.addEventListener('loaded', () => {
