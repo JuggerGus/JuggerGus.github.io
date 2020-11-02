@@ -68,7 +68,7 @@ window.onload = () => {
                     // add place name
                     const text = document.createElement('a-link');
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    text.setAttribute('title', place.name);
+                    text.setAttribute('title','juggerGus' );
                     text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
                     text.setAttribute('scale', '20 20 20');
 
