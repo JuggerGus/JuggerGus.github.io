@@ -4,7 +4,7 @@ const loadPlaces = function (coords) {
 
     const PLACES = [
         {
-            name: "Home",
+            name: "Your place name",
             location: {
                 lat: 0, // add here latitude if using static data
                 lng: 0, // add here longitude if using static data
@@ -70,7 +70,7 @@ window.onload = () => {
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.example.com/');
-                    text.setAttribute('scale', '15 15 15');
+                    text.setAttribute('scale', '20 20 20');
 
                     text.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
