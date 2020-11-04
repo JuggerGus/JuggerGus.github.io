@@ -19,9 +19,9 @@ const loadPlaces = function (coords) {
         },
     ];
 
-    if (method === 'api') {
-        return loadPlaceFromAPIs(coords);
-    }
+    //if (method === 'api') {
+      //  return loadPlaceFromAPIs(coords);
+    //}
 
     return Promise.resolve(PLACES);
 };
