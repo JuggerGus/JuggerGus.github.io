@@ -22,7 +22,7 @@ const loadPlaces = function (coords) {
 // getting places from REST APIs
 function loadPlaceFromAPIs(position) {
     const params = {
-        radius: 300,    // search places not farther than this value (in meters)
+        radius: 100,    // search places not farther than this value (in meters)
         clientId: 'HKAW5VITMAJNCPSOD3ADM3GGWN4SPT2MGPYAZLDWWOZRRNLZ',
         clientSecret: 'OCR21ENMN54X5JO4BIK3X2OOMNKDJYPJTJ3D0KFDXGBQ2WSI',
         version: '20300101',    // foursquare versioning, required but unuseful for this demo
@@ -37,7 +37,7 @@ function loadPlaceFromAPIs(position) {
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=10
+        &limit=5
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {
@@ -69,7 +69,7 @@ window.onload = () => {
                     const text = document.createElement('a-link');
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
+                    text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '20 20 20');
 
                     text.addEventListener('loaded', () => {
