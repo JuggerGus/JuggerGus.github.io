@@ -107,11 +107,11 @@ function renderPlaces(places) {
         let longitude = place.location.lng;
 
         // add place name
-       // let text = document.createElement('a-link');
-       // text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-       // text.setAttribute('title', place.name);
+       let text = document.createElement('a-link');
+       text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+       text.setAttribute('title', place.name);
         text.setAttribute('href', 'http://www.example.com/');
-        // text.setAttribute('scale', '10 10 10');
+        text.setAttribute('scale', '10 10 10');
 
 
         // add place icon
