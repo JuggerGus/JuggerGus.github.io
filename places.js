@@ -1,13 +1,13 @@
 const loadPlaces = function (coords) {
     // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
-    const method = 'api';
+    //const method = 'api';
 
     const PLACES = [
         {
-            name: "Your place name",
+            name: "Laboratorio",
             location: {
-                lat: 0, // add here latitude if using static data
-                lng: 0, // add here longitude if using static data
+                lat: 19.7255073, // add here latitude if using static data
+                lng: -103.460633, // add here longitude if using static data
             }
         },
     ];
@@ -66,17 +66,29 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place name
-                    const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
-                    text.setAttribute('scale', '20 20 20');
+                    //const text = document.createElement('a-link');
+                    //text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+                    //text.setAttribute('title', place.name);
+                    //text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
+                    //text.setAttribute('scale', '20 20 20');
+
+                    // add place icon
+                    const icon = document.createElement('a-image');
+                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    icon.setAttribute('name', place.name);
+                    icon.setAttribute('src', './map-marker.png');
+                    icon.setAttribute('scale', '30, 30, 30');
+
+                    icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+         });
 
                     text.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
 
                     scene.appendChild(text);
+                    scene.appendChild(icon);
+                    
                 });
             })
     },
