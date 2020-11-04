@@ -20,6 +20,7 @@ function staticLoadPlaces() {
             lng: -103.4611392,
         }
     },
+
    ];
 }
 
@@ -32,10 +33,10 @@ function renderPlaces(places) {
 
        let model = document.createElement('a-entity');
        model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-       model.setAttribute('gltf-model', './assets/magnemite/scene.gltf');
+       model.setAttribute('gltf-model', './assets/magnemite/cuerpo.glb');
        model.setAttribute('rotation', '0 180 0');
        model.setAttribute('animation-mixer', '');
-       model.setAttribute('scale', '2 2 2');
+       model.setAttribute('scale', '3 3 3');
        //model.setAttribute(name);
 
        model.addEventListener('loaded', () => {
