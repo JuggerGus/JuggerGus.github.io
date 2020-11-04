@@ -8,18 +8,11 @@ function staticLoadPlaces() {
        {
            name: 'Laboratorio',
            location: {
-               lat: 44.496470,
-               lng: 11.320180,
+               lat: 19.7255073,
+               lng: -103.460633,
            }
        },
-
-       {
-        name: 'Rectoria',
-        location: {
-            lat: 44.496470,
-            lng: 11.320180,
-        }
-    },
+       
    ];
 }
 
