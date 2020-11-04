@@ -12,6 +12,14 @@ function staticLoadPlaces() {
                lng: -103.460633,
            }
        },
+
+       {
+        name: 'Rectoria',
+        location: {
+            lat: 19.725263,
+            lng: -103.4611392,
+        }
+    },
    ];
 }
 
@@ -28,6 +36,7 @@ function renderPlaces(places) {
        model.setAttribute('rotation', '0 180 0');
        model.setAttribute('animation-mixer', '');
        model.setAttribute('scale', '2 2 2');
+       //model.setAttribute(name);
 
        model.addEventListener('loaded', () => {
            window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
