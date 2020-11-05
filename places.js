@@ -81,11 +81,11 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place name
-                    const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
-                    text.setAttribute('scale', '0 0 0');
+                    //const text = document.createElement('a-link');
+                    //text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+                    //text.setAttribute('title', place.name);
+                    //text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
+                    //text.setAttribute('scale', '0 0 0');
 
                     // add place icon
                     const icon = document.createElement('a-image');
@@ -103,7 +103,7 @@ window.onload = () => {
 
                     
                     const clickListener = function(ev) {
-                        ev.stopPropagation();
+                        ev.stopPropagation();   
                         ev.preventDefault();
 
                         const name = ev.target.getAttribute('name');
