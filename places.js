@@ -66,44 +66,32 @@ function loadPlaceFromAPIs(position) {
         })
 };
 
-
 window.onload = () => {
     const scene = document.querySelector('a-scene');
 
     // first get current user location
     return navigator.geolocation.getCurrentPosition(function (position) {
 
-        // than use it to load from remote APIs some places nearby
+        // then use it to load from remote APIs some places nearby
         loadPlaces(position.coords)
             .then((places) => {
                 places.forEach((place) => {
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
 
-                    // add place name
-                    //const text = document.createElement('a-link');
-                    //text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    //text.setAttribute('title', place.name);
-                    //text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
-                    //text.setAttribute('scale', '0 0 0');
-
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
                     icon.setAttribute('name', place.name);
-                    icon.setAttribute('src', './icon.png');
-                    icon.setAttribute('scale', '10, 10, 10');
+                    icon.setAttribute('src', '../assets/map-marker.png');
 
-                    icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-         });
+                    // for debug purposes, just show in a bigger scale, otherwise I have to personally go on places...
+                    icon.setAttribute('scale', '20, 20');
 
-                    text.addEventListener('loaded', () => {
-                        window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-                    });
+                    icon.addEventListener('loaded', () => window.dispatchEvent(new CustomEvent('gps-entity-place-loaded')));
 
-                    
                     const clickListener = function(ev) {
-                        ev.stopPropagation();   
+                        ev.stopPropagation();
                         ev.preventDefault();
 
                         const name = ev.target.getAttribute('name');
@@ -124,11 +112,9 @@ window.onload = () => {
                         }
                     };
 
-icon.addEventListener('click', clickListener);
-
-                    scene.appendChild(text);
-                    scene.appendChild(icon);
+                    icon.addEventListener('click', clickListener);
                     
+                    scene.appendChild(icon);
                 });
             })
     },
