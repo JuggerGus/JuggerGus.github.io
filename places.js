@@ -88,21 +88,21 @@ window.onload = () => {
                     text.setAttribute('scale', '5 5 5');
 
                     // add place icon
-                    const icon = document.createElement('a-image');
-                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-                    icon.setAttribute('name', place.name);
-                    icon.setAttribute('src', './icon.png');
-                    icon.setAttribute('scale', '10, 10, 10');
+                    //const icon = document.createElement('a-image');
+                    //icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    //icon.setAttribute('name', place.name);
+                    //icon.setAttribute('src', './icon.png');
+                    //icon.setAttribute('scale', '10, 10, 10');
 
-                    icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-         });
+                    //icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+         //});
 
                     text.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
 
                     scene.appendChild(text);
-                    scene.appendChild(icon);
+                    //scene.appendChild(icon);
                     
                 });
             })
