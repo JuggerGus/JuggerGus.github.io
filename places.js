@@ -17,6 +17,14 @@ const loadPlaces = function (coords) {
                 lng: -103.4611392, // add here longitude if using static data
             }
         },
+
+        {
+            name: "Fruteria",
+            location: {
+                lat: 19.7150828, // add here latitude if using static data
+                lng: -103.4656343, // add here longitude if using static data
+            }
+        },
     ];
 
     //if (method === 'api') {
