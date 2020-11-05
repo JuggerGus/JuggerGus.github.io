@@ -97,11 +97,11 @@ window.onload = () => {
                     icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
          });
 
-                    text.addEventListener('loaded', () => {
-                        window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-                    });
+                    //text.addEventListener('loaded', () => {
+                        //window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+                    //});
 
-                    scene.appendChild(text);
+                    //scene.appendChild(text);
                     scene.appendChild(icon);
                     
                 });
