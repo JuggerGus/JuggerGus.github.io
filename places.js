@@ -4,7 +4,7 @@ const loadPlaces = function (coords) {
 
     const PLACES = [
         {
-            name: "Laboratorio",
+            name: "Laboratorio de XR",
             location: {
                 lat: 19.7255073, // add here latitude if using static data
                 lng: -103.460633, // add here longitude if using static data
@@ -19,10 +19,10 @@ const loadPlaces = function (coords) {
         },
 
         {
-            name: "Fruteria",
+            name: "Auditorio Aguilar Zincer",
             location: {
-                lat: 19.7150828, // add here latitude if using static data
-                lng: -103.4656343, // add here longitude if using static data
+                lat: 19.7262901, // add here latitude if using static data
+                lng: -103.4613013, // add here longitude if using static data
             }
         },
     ];
@@ -84,7 +84,7 @@ window.onload = () => {
                     const text = document.createElement('a-link');
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'https://www.facebook.com/JuggerGus/');
+                    text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '5 5 5');
 
                     // add place icon
