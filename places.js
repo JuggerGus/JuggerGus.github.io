@@ -3,21 +3,15 @@ const loadPlaces = function (coords) {
     //const method = 'api';
 
     const PLACES = [
-       // {
-         //   name: "Laboratorio de XR",
-           // location: {
-             //   lat: 19.7255073, // add here latitude if using static data
-               // lng: -103.460633, // add here longitude if using static data
-           // }
-       // },
-
         {
-            name: "Rectoria",
+            name: "Laboratorio de XR",
             location: {
-                lat: 19.7254034, // add here latitude if using static data
-                lng: -103.4612983, // add here longitude if using static data
-            }
-        },
+             lat: 19.7255073, // add here latitude if using static data
+             lng: -103.460633, // add here longitude if using static data
+           }
+       },
+
+        
 
         {
             name: "Auditorio Aguilar Zincer",
@@ -57,6 +51,15 @@ const loadPlaces = function (coords) {
                 lng: -103.460268, // add here longitude if using static data
             }
         },
+
+        {
+            name: "Rectoria",
+            location: {
+                lat: 19.7254034, // add here latitude if using static data
+                lng: -103.4612893, // add here longitude if using static data
+            }
+        },
+
     ];
 
     //if (method === 'api') {
