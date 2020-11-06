@@ -3,13 +3,13 @@ const loadPlaces = function (coords) {
     //const method = 'api';
 
     const PLACES = [
-        {
-            name: "Laboratorio de XR",
-            location: {
-                lat: 19.7255073, // add here latitude if using static data
-                lng: -103.460633, // add here longitude if using static data
-            }
-        },
+       // {
+         //   name: "Laboratorio de XR",
+           // location: {
+             //   lat: 19.7255073, // add here latitude if using static data
+               // lng: -103.460633, // add here longitude if using static data
+           // }
+       // },
 
         {
             name: "Rectoria",
