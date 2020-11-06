@@ -10,11 +10,12 @@ const loadPlaces = function (coords) {
                 lng: -103.460633, // add here longitude if using static data
             }
         },
+
         {
             name: "Rectoria",
             location: {
-                lat: 19.725263, // add here latitude if using static data
-                lng: -103.4611392, // add here longitude if using static data
+                lat: 19.7254034, // add here latitude if using static data
+                lng: -103.4612983, // add here longitude if using static data
             }
         },
 
