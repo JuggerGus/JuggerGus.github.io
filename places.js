@@ -25,6 +25,37 @@ const loadPlaces = function (coords) {
                 lng: -103.4613013, // add here longitude if using static data
             }
         },
+
+        {
+            name: "C.A.S.A",
+            location: {
+                lat: 19.725702, // add here latitude if using static data
+                lng: -103.462350, // add here longitude if using static data
+            }
+        },
+        {
+            name: "Edificio T",
+            location: {
+                lat: 19.726120, // add here latitude if using static data
+                lng: -103.460681, // add here longitude if using static data
+            }
+        },
+
+        {
+            name: "Centro Acuatico",
+            location: {
+                lat: 19.724283, // add here latitude if using static data
+                lng: -103.461716, // add here longitude if using static data
+            }
+        },
+
+        {
+            name: "Laboratorio de Bioquimica",
+            location: {
+                lat: 19.723928, // add here latitude if using static data
+                lng: -103.460268, // add here longitude if using static data
+            }
+        },
     ];
 
     //if (method === 'api') {
