@@ -117,7 +117,7 @@ window.onload = () => {
 
                     // add place name
                     const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+                    text.setAttribute('gps-entity-place', `latitude: 19.7255073; longitude: -103.460633;`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '10 10 10');
