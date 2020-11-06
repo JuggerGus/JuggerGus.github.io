@@ -8,7 +8,7 @@ const loadPlaces = function (coords) {
             location: {
              lat: 19.7255073, // add here latitude if using static data
              lng: -103.460633, // add here longitude if using static data
-             text.setAttribute('href', 'https://web.whatsapp.com/');
+             
            }
        },
 
