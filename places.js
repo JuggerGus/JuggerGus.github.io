@@ -8,6 +8,7 @@ const loadPlaces = function (coords) {
             location: {
              lat: 19.7255073, // add here latitude if using static data
              lng: -103.460633, // add here longitude if using static data
+             text.setAttribute('href', 'https://web.whatsapp.com/');
            }
        },
 
@@ -117,7 +118,7 @@ window.onload = () => {
 
                     // add place name
                     const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: 19.7255073; longitude: -103.460633;`);
+                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '10 10 10');
