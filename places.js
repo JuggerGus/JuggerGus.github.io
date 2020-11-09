@@ -1,5 +1,5 @@
 const loadPlaces = function (coords) {
-    // COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
+    //COMMENT FOLLOWING LINE IF YOU WANT TO USE STATIC DATA AND ADD COORDINATES IN THE FOLLOWING 'PLACES' ARRAY
     //const method = 'api';
 
     const PLACES = [
@@ -63,6 +63,8 @@ const loadPlaces = function (coords) {
 
     ];
 
+    //AND THE IF METHOD, COUSE IS PART OF "api"
+
     //if (method === 'api') {
       //  return loadPlaceFromAPIs(coords);
     //}
@@ -82,7 +84,7 @@ function loadPlaceFromAPIs(position) {
     // CORS Proxy to avoid CORS problems
     const corsProxy = 'https://cors-anywhere.herokuapp.com/';
 
-    // Foursquare API
+    // Foursquare API BODY
     const endpoint = `${corsProxy}https://api.foursquare.com/v2/venues/search?intent=checkin
         &ll=${position.latitude},${position.longitude}
         &radius=${params.radius}
