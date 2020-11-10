@@ -124,6 +124,8 @@ window.onload = () => {
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '7 7 7');
+                    text.setAttribute('gps-entity-place', `latitude: 19.7254426; longitude: -103.461235;`);
+                    text.setAttribute('href', 'http://www.google.com/');
                 
                     // add place icon
                     //const icon = document.createElement('a-image');
