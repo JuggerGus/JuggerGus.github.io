@@ -120,8 +120,8 @@ window.onload = () => {
 
                     // add place name
                     const text = document.createElement('a-link');
-                    
-                    <a-box material="color: yellow" />
+
+                    //<a-box material="color: yellow" />
 
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
