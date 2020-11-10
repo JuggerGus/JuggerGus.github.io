@@ -114,17 +114,20 @@ window.onload = () => {
         // than use it to load from remote APIs some places nearby
         loadPlaces(position.coords)
             .then((places) => {
-                places.forEach((place) => {
+                places.forEach((place) => { 
                     const latitude = place.location.lat;
                     const longitude = place.location.lng;
 
                     // add place name
                     const text = document.createElement('a-link');
+                    
+                    <a-box material="color: yellow" />
+
                     text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '7 7 7');
-
+                
                     // add place icon
                     //const icon = document.createElement('a-image');
                     //icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
