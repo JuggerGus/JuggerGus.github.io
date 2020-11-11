@@ -119,16 +119,16 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place name
-                    const text = document.createElement('a-link');
+                    //const text = document.createElement('a-link');
                     //text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     //text.setAttribute('title', place.name);
-                    text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
+                    //text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     //text.setAttribute('scale', '7 7 7');
                     
                     // add place icon
                     const icon = document.createElement('a-image');
                     icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
-                    icon.setAttribute('name', place.name);
+                    icon.setAttribute('name:', place.name);
                     icon.setAttribute('src', './icon.png');
                     icon.setAttribute('scale', '10, 10, 10');
 
