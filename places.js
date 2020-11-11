@@ -29,37 +29,7 @@ const loadPlaces = function (coords) {
                 lng: -103.462350, // add here longitude if using static data
             }
         },
-        {
-            name: "Edificio T",
-            location: {
-                lat: 19.726120, // add here latitude if using static data
-                lng: -103.460681, // add here longitude if using static data
-            }
-        },
-
-        {
-            name: "Centro Acuatico",
-            location: {
-                lat: 19.724283, // add here latitude if using static data
-                lng: -103.461716, // add here longitude if using static data
-            }
-        },
-
-        {
-            name: "Laboratorio de Bioquimica",
-            location: {
-                lat: 19.723928, // add here latitude if using static data
-                lng: -103.460268, // add here longitude if using static data
-            }
-        },
-
-        {
-            name: "Rectoria",
-            location: {
-                lat: 19.7254426, // add here latitude if using static data
-                lng: -103.461235, // add here longitude if using static data
-            }
-        },
+        
 
     ];
 
@@ -120,7 +90,13 @@ window.onload = () => {
 
                     // add place name
                     const text = document.createElement('a-link');
-                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+                    text.setAttribute('gps-entity-place', `latitude: 19.725245; longitude: -103.461100;`);
+                    text.setAttribute('title', place.name);
+                    text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
+                    text.setAttribute('scale', '7 7 7');
+
+                    const text = document.createElement('a-link');
+                    text.setAttribute('gps-entity-place', `latitude: 19.7262901; longitude: -103.4613013;`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '7 7 7');
