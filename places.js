@@ -46,7 +46,7 @@ const loadPlaces = function (coords) {
         },
 
         {
-            name: "Laboratorio de Bioquimica",
+            name: "Edificio Y",
             location: {
                 lat: 19.723928, // add here latitude if using static data
                 lng: -103.460268, // add here longitude if using static data
@@ -58,6 +58,14 @@ const loadPlaces = function (coords) {
             location: {
                 lat: 19.7254426, // add here latitude if using static data
                 lng: -103.461235, // add here longitude if using static data
+            }
+        },
+
+        {
+            name: "Edificio B",
+            location: {
+                lat: 19.725777, // add here latitude if using static data
+                lng: -103.461202, // add here longitude if using static data
             }
         },
 
@@ -119,28 +127,28 @@ window.onload = () => {
                     const longitude = place.location.lng;
 
                     // add place name
-                    //const text = document.createElement('a-link');
-                    //text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    //text.setAttribute('title', place.name);
-                    //text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
-                    //text.setAttribute('scale', '7 7 7');
+                    const text = document.createElement('a-link');
+                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
+                    text.setAttribute('title', place.name);
+                    text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
+                    text.setAttribute('scale', '7 7 7');
                     
-                    // add place icon
+                    /* add place icon
                     const icon = document.createElement('a-image');
-                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     icon.setAttribute('name:', place.name);
                     icon.setAttribute('src', './icon.png');
                     icon.setAttribute('scale', '10, 10, 10');
 
                     icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-         });
+         }); */
 
                     text.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
                     });
 
                     scene.appendChild(text);
-                    scene.appendChild(icon);
+                    //scene.appendChild(icon);
                     
                 });
             })
