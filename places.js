@@ -64,7 +64,7 @@ const loadPlaces = function (coords) {
             name: "Edificio B",
             location: {
                 lat: 19.725777, // add here latitude if using static data
-                lng: -103.461203, // add here longitude if using static data
+                lng: -103.461202, // add here longitude if using static data
             }
         },
 
@@ -127,7 +127,7 @@ window.onload = () => {
 
                     // add place name
                     const text = document.createElement('a-link');
-                    text.setAttribute(`latitude: 19.725471; longitude: -103.461211;`);
+                    text.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
                     text.setAttribute('title', place.name);
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '7 7 7');
