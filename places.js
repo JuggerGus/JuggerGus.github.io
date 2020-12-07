@@ -64,8 +64,8 @@ const loadPlaces = function (coords) {
         {
             name: "Edificio B",
             location: {
-                lat: 19.725471, // add here latitude if using static data
-                lng: -103.461211, // add here longitude if using static data
+                lat: 19.725777, // add here latitude if using static data
+                lng: -103.461202, // add here longitude if using static data
             }
         },
 
