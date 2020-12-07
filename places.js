@@ -6,8 +6,8 @@ const loadPlaces = function (coords) {
         {
             name: "Edificio C",
             location: {
-             lat: 19.725245, // add here latitude if using static data
-             lng: -103.461100, // add here longitude if using static data
+             lat: 19.725258, // add here latitude if using static data
+             lng: -103.461147, // add here longitude if using static data
              
            }
        },
@@ -15,7 +15,7 @@ const loadPlaces = function (coords) {
         
 
         {
-            name: "Auditorio Aguilar Zincer",
+            name: "Auditorio Aguilar Zinser",
             location: {
                 lat: 19.7262901, // add here latitude if using static data
                 lng: -103.4613013, // add here longitude if using static data
@@ -56,18 +56,19 @@ const loadPlaces = function (coords) {
         {
             name: "Rectoria",
             location: {
-                lat: 19.7254426, // add here latitude if using static data
-                lng: -103.461235, // add here longitude if using static data
+                lat: 19.725471, // add here latitude if using static data
+                lng: -103.461211, // add here longitude if using static data
             }
         },
 
         {
             name: "Edificio B",
             location: {
-                lat: 19.725777, // add here latitude if using static data
-                lng: -103.461202, // add here longitude if using static data
+                lat: 19.725471, // add here latitude if using static data
+                lng: -103.461211, // add here longitude if using static data
             }
         },
+
 
     ];
 
@@ -98,7 +99,7 @@ function loadPlaceFromAPIs(position) {
         &radius=${params.radius}
         &client_id=${params.clientId}
         &client_secret=${params.clientSecret}
-        &limit=10
+        &limit=15
         &v=${params.version}`;
     return fetch(endpoint)
         .then((res) => {
@@ -133,15 +134,15 @@ window.onload = () => {
                     text.setAttribute('href', 'http://www.cusur.udg.mx/es/');
                     text.setAttribute('scale', '7 7 7');
                     
-                    /* add place icon
-                    const icon = document.createElement('a-image');
-                    icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-                    icon.setAttribute('name:', place.name);
-                    icon.setAttribute('src', './icon.png');
-                    icon.setAttribute('scale', '10, 10, 10');
+                    // add place icon
+                    //const icon = document.createElement('a-image');
+                    //icon.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude}`);
+                    //icon.setAttribute('name:', place.name);
+                    //icon.setAttribute('src', './icon.png');
+                    //icon.setAttribute('scale', '10, 10, 10');
 
-                    icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
-         }); */
+                    //icon.addEventListener('loaded', () => {window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
+         //});
 
                     text.addEventListener('loaded', () => {
                         window.dispatchEvent(new CustomEvent('gps-entity-place-loaded'))
