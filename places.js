@@ -4,10 +4,10 @@ const loadPlaces = function (coords) {
 
     const PLACES = [
         {
-            name: "Edificio C",
+            name: "Queseria Godinez",
             location: {
-             lat: 19.725258, // add here latitude if using static data
-             lng: -103.461147, // add here longitude if using static data
+             lat: 19.7146539, // add here latitude if using static data
+             lng: -103.4646238, // add here longitude if using static data
              
            }
        },
@@ -15,59 +15,32 @@ const loadPlaces = function (coords) {
         
 
         {
-            name: "Auditorio Aguilar Zinser",
+            name: "Abarrotes",
             location: {
-                lat: 19.7262901, // add here latitude if using static data
-                lng: -103.4613013, // add here longitude if using static data
+                lat: 19.715125, // add here latitude if using static data
+                lng: -103.465761, // add here longitude if using static data
             }
         },
 
         {
-            name: "C.A.S.A.",
+            name: "Fruteria Azael",
             location: {
-                lat: 19.725702, // add here latitude if using static data
-                lng: -103.462350, // add here longitude if using static data
+                lat: 19.715077, // add here latitude if using static data
+                lng: -103.465653, // add here longitude if using static data
             }
         },
-        {
-            name: "Edificio T",
-            location: {
-                lat: 19.726120, // add here latitude if using static data
-                lng: -103.460681, // add here longitude if using static data
-            }
-        },
+        
+
 
         {
-            name: "Centro Acuatico",
-            location: {
-                lat: 19.724283, // add here latitude if using static data
-                lng: -103.461716, // add here longitude if using static data
-            }
-        },
-
-        {
-            name: "Edificio Y",
-            location: {
-                lat: 19.723928, // add here latitude if using static data
-                lng: -103.460268, // add here longitude if using static data
-            }
-        },
-
-        {
-            name: "Rectoria",
+            name: "Rectoria CUSur",
             location: {
                 lat: 19.725471, // add here latitude if using static data
                 lng: -103.461211, // add here longitude if using static data
             }
         },
 
-        {
-            name: "Edificio B",
-            location: {
-                lat: 19.725777, // add here latitude if using static data
-                lng: -103.461202, // add here longitude if using static data
-            }
-        },
+       
 
 
     ];
