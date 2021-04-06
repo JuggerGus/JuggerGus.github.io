@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 <!doctype html>
 <html>
-    <title> AR imagenes 4 </title>
+    <title> AR imagenes 5 </title>
     <head>
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
@@ -18,7 +18,7 @@
             embedded
             gesture-detector
         >
-        <!-- Marcador simple con bordes resaltados-->
+        <!-- Marcador simple con bordes resaltados "URL"-->
 
             <a-marker
                 id="animated-marker"
@@ -30,12 +30,12 @@
                 cursor="fuse: false; rayOrigin: mouse;"
                 id="markerA"
             >
-            <!-- Parte dek codigo que nos perimte colocar imagens (png, jpg) en en marcado -->
+            <!-- Parte del codigo que nos perimte colocar imagens (png, jpg) en en marcador -->
                 <a-image
                     src="assets/QUETA.png"
                     scale="1 1 1"
                     class="clickable"
-                    rotation="-90 90 0"
+                    rotation="-90 180 0"
                     gesture-handler
                 ></a-image>
             </a-marker>
