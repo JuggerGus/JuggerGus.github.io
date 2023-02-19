@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
     <title>
-        Neuron State
+        Neuron State_move
     </title>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -26,10 +26,21 @@
             </a-entity>
         </a-marker>
 
+
+        <script>
+            document.querySelector("a-marker").addEventListener("click", function () {
+              var mybox = document.querySelector("#mybox");
+              mybox.setAttribute("position", "0 0 -1"); // move the box 1 meter away from the camera
+              mybox.setAttribute("scale", "2 2 2"); // double the size of the box
+            });
+          </script>
       
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
         </a-scene>
+
+
+
     </body>
 </html>
