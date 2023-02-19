@@ -1,0 +1,11 @@
+Model Information:
+* title:	Singularity 001
+* source:	https://sketchfab.com/3d-models/singularity-001-e392fc2d7d61449b9b20bfb997171b7b
+* author:	Swarmrider (https://sketchfab.com/Swarmrider)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Singularity 001" (https://sketchfab.com/3d-models/singularity-001-e392fc2d7d61449b9b20bfb997171b7b) by Swarmrider (https://sketchfab.com/Swarmrider) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
