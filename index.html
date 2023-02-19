@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
     <title>
-        Neuron State_1
+        Neuron state
     </title>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -31,57 +31,5 @@
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
         </a-scene>
-        
-
-
-        <script>
-            AFRAME.registerComponent("gesture-handler", {
-              init: function () {
-                this.target = document.querySelector("#mybox");
-                this.scale = this.target.getAttribute("scale");
-                this.position = this.target.getAttribute("position");
-                this.swipeActive = false;
-                this.pinchActive = false;
-                this.handleSwipe = this.handleSwipe.bind(this);
-                this.handlePinch = this.handlePinch.bind(this);
-              },
-              tick: function () {
-                if (this.swipeActive) {
-                  this.target.setAttribute("position", {
-                    x: this.position.x + this.deltaX / 100,
-                    y: this.position.y + this.deltaY / 100,
-                    z: this.position.z,
-                  });
-                }
-                if (this.pinchActive) {
-                  this.target.setAttribute("scale", {
-                    x: this.scale.x * this.pinchScale,
-                    y: this.scale.y * this.pinchScale,
-                    z: this.scale.z * this.pinchScale,
-                  });
-                }
-              },
-              handleSwipe: function (evt) {
-                this.deltaX = evt.detail.positionDelta.x;
-                this.deltaY = evt.detail.positionDelta.y;
-                this.swipeActive = true;
-              },
-              handlePinch: function (evt) {
-                this.pinchScale = evt.detail.scaleDelta;
-                this.pinchActive = true;
-              },
-            });
-      
-            document
-              .querySelector("#mybox")
-              .setAttribute("gesture-handler", {});
-      
-            document.querySelector("a-marker").addEventListener("markerFound", function () {
-              console.log("Marker found");
-            });
-          </script>
-
-
-
     </body>
 </html>
