@@ -1,11 +1,11 @@
 Model Information:
-* title:	Singularity 001
-* source:	https://sketchfab.com/3d-models/singularity-001-e392fc2d7d61449b9b20bfb997171b7b
-* author:	Swarmrider (https://sketchfab.com/Swarmrider)
+* title:	Olfactory Mitral, Tufted, and Granule Cells
+* source:	https://sketchfab.com/3d-models/olfactory-mitral-tufted-and-granule-cells-21a500cd56d74fa2853b3d9e6b4c54b5
+* author:	JustasB (https://sketchfab.com/justasb)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "Singularity 001" (https://sketchfab.com/3d-models/singularity-001-e392fc2d7d61449b9b20bfb997171b7b) by Swarmrider (https://sketchfab.com/Swarmrider) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Olfactory Mitral, Tufted, and Granule Cells" (https://sketchfab.com/3d-models/olfactory-mitral-tufted-and-granule-cells-21a500cd56d74fa2853b3d9e6b4c54b5) by JustasB (https://sketchfab.com/justasb) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
