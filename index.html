@@ -1,7 +1,7 @@
 <!doctype HTML>
 <html>
     <title>
-        DNA
+        DNA 2
     </title>
     <head>
         <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
@@ -14,11 +14,13 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
-
+        <a-assets>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
+        </a-assets>
 
         <a-marker type='hiro' value='7'>
             <a-entity
-                gltf-model="Cell_state7.glb"
+                gltf-model="P_Steward.gltf"
                 scale="1 1 1"
                 animation="property: rotation; to: 0 360 0; loop: true; dur: 9000; easing: linear">
             </a-entity>
