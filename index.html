@@ -5,7 +5,15 @@
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs>
     <!-- create your content here. just a box for now -->
-    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+
+    <!-- define your gltf asset -->
+    <a-assets>
+    <a-asset-item id="tree" src="https://github.com/JuggerGus/JuggerGus.github.io/blob/master/Cell_state7.glb"></a-asset-item>
+    </a-assets>
+    <!-- use your gltf model -->
+    <a-entity gltf-model="Cell_state7.glb"></a-entity>
+
+    
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
