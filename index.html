@@ -3,9 +3,18 @@
 <!-- include ar.js for A-Frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <body style='margin : 0px; overflow: hidden;'>
+
   <a-scene embedded arjs>
     <!-- create your content here. just a box for now -->
-    <a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+    <!-- define your gltf asset -->
+
+    <a-assets>
+        <a-asset-item id="tree" src="https://github.com/JuggerGus/JuggerGus.github.io/blob/master/P_Steward.gltf"></a-asset-item>
+    </a-assets>
+    <!-- use your gltf model -->
+    <a-entity gltf-model="P_Steward.gltf"></a-entity>
+
+
     <!-- define a camera which will move according to the marker position -->
     <a-marker-camera preset='hiro'></a-marker-camera>
   </a-scene>
