@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html> 
-    <title>
-        Cell State
-    </title>
-  <head>
-    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script> 
-    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-  </head>   
+    <title>Cell State Human Brain</title>
+    <head>
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script> 
+        <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    </head>   
 
-  <body>
-    <a-scene embedded arjs>
-      <a-entity scale=".01 .01 .01"> 
-        <a-entity gltf-model="Cell_state7.glb" scale=".5 .5 .5" crossOrigin="anonymous">
-        </a-entity>
-        <a-marker-camera preset='hiro'></a-marker-camera>
+    <body>
+        <a-scene embedded arjs>
+            <a-entity scale=".01 .01 .01"> 
+                <a-entity 
+                    gltf-model="Cell_state7.glb" 
+                    scale=".5 .5 .5" 
+                    crossOrigin="anonymous"
+                    animation="property: rotation; to: 0 360 0; loop: true; dur: 5000">
+                </a-entity>
+            </a-entity>
+            <a-marker-camera preset='hiro'></a-marker-camera>
         </a-scene>
-      </body>
-    </html>
+    </body>
+</html>
